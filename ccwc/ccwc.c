@@ -119,16 +119,18 @@ int main (int argc, char* argv[]) {
         }
         printf(" %s\n", argv[i]);
     }
-    if (lflag) {
-        printf("%8d", lines_total);
+    if (argc > 1) {
+        if (lflag) {
+            printf("%8d", lines_total);
+        }
+        if (wflag) {
+            printf("%8d", words_total);
+        }
+        if (cflag || mflag) {
+            printf("%8lu", bytes_total);
+        }
+        printf(" Total\n");
     }
-    if (wflag) {
-        printf("%8d", words_total);
-    }
-    if (cflag || mflag) {
-        printf("%8lu", bytes_total);
-    }
-    printf(" Total\n");
 }
 
 
