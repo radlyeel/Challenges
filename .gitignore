@@ -1,3 +1,14 @@
+# executables
+
+# test data
+ccwc/long.txt
+ccwc/short.txt
+ccwc/test.html
+ccwc/test.txt
+json/test/
+json/tests/
+*.zip
+
 # Prerequisites
 *.d
 
@@ -35,6 +46,8 @@
 *.i*86
 *.x86_64
 *.hex
+ccwc/ccwc
+json/json
 
 # Debug files
 *.dSYM/
@@ -50,3 +63,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Intermediate artifacts
+lex.yy.c
