@@ -10,8 +10,6 @@ json: scanner.l
 clean: 
 	rm -f lex.yy.c json
 
-check_valid: json
-	./json < tests/step1/valid.json
+check: json
+	./json < tests/step1/$(DATA).json
 
-check_invalid: json
-	./json < tests/step1/invalid.json
