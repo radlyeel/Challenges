@@ -1,0 +1,20 @@
+References:
+ Challenge--
+ https://codingchallenges.fyi/challenges/challenge-json-parser
+ Specs--
+ https://www.baeldung.com/linux/jq-command-json
+
+IMHBEO, the challenge is under-specified.  Specifically, how will this parser
+be used?  I.e., should it be as rich as Python's json.loads() function,
+that returns an object with the same structure as the JSON file? I choose
+rather to reproduce jq, a CLI tool for inspecting JSON files. 
+As it happens, Anaconda includes jq-1.6, so that will be my "ground truth".  n jq" is very informative, and I will use it to choose a subset of options to implement, to make test automation a reasonable task.
+
+The first hiccup is that "jq '.' tests/step1/invalid.json" returns 0 rather than  1 as specified in the challenge.  So that will be a difference between ccjq and jq.
+
+Second, for my own personal desire to use these challenges as toolto build
+my software engineering toolkit, I will be using Flex and Bison.  Wish  me luck.
+
+It appears on first reading that the jq option '.' will suffice. the tests will consist of comparing the ouput of ccjq and jq with options . and -M (for
+monochrome output.
+

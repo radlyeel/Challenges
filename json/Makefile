@@ -13,6 +13,6 @@ $(PROG): $(RULES)
 clean: 
 	rm -f $(PROG).tab.*
 
- check: $(PROG)
+check: $(PROG)
 	./$(PROG)
 
